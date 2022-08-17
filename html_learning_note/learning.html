@@ -1,21 +1,88 @@
 <!DOCTYPE html>
 <html>
- 
+   <head>
+      
+      <link rel="stylesheet" href="prism.css">
+  </head>
 <body>
+
+
 
 
  <h1>COMMENT</h1>  
  <p>When you want to add a comment, you can print that: <br>
-    
- &lt;!-- make comments here --&gt;
-
+ <pre>
+   <code class="language-html">
+   &lt;!-- make comments here --&gt;
+   </code>
+</pre>   
 
 
 
  
  <h1>HYPERLINK</h1>
- 
- 
+ <h2>BASIC</h2>
+ <p>the tag of hyperlink is &lt;a&gt;<br>
+   the most important attribute is href, which contain the link's destination<br>
+   for example i can create a link to my blog using<br>
+   <pre>
+      <code class="language-html">
+    &lt;a href="https://galaxygao.github.io/">G_Star's Blog &lt;/a&gt;<br>
+      </code>
+   </pre>
+   where href is the URL and "G_Star's Blog" is the text contents.
+   <h3>Effect:<br></h3>
+   <a href="https://galaxygao.github.io/">G_Star's Blog </a>
+</p> 
+<h2>THE TARGET ATTRIBUTE</h2>
+ <p>
+   By default, the linked page will be displayed in the current browser window. <br>
+   To change this, you must specify another target for the link.<br>
+   The basic syntax of "target" is <br>
+   <pre>
+      <code class="language-html">
+         &lt;a href="URL" target="value">TEXT_NAME &lt;/a&gt;
+      </code>
+   </pre>
+   There are four "target" value:
+   <h3> _self</h3>
+   - Default. Opens the document in the same window/tab as it was clicked
+   <a href="https://galaxygao.github.io/" target="_self">G_Star's Blog </a>
+
+   <h3>_blank</h3> 
+   - Opens the document in a new window or tab
+   <a href="https://galaxygao.github.io/" target="_blank">G_Star's Blog </a>
+   <h3>_parent</h3> 
+   - Opens the document in the parent frame
+   <a href="https://galaxygao.github.io/" target="_parent">G_Star's Blog </a>
+   <h3>_top</h3> 
+   - Opens the document in the full body of the window
+   <a href="https://galaxygao.github.io/" target="_top">G_Star's Blog </a>
+ </p>
+<h2>Absolute URLs && Relative URLs</h2>
+<pre>
+   <code class="language-html">
+      <h2>Absolute URLs</h2>
+      &lt;a href="https://www.w3.org/">W3C&lt;/a>
+      &lt;a href="https://www.google.com/">Google&lt;/a>
+      <h2>Relative URLs</h2>
+      &lt;a href="prism.css">PRISM.CSSs&lt;/a>
+      &lt;a href="prism.js">PRISM.JS&lt;/a>
+   </code>
+   
+      
+</pre>
+      <a href="https://www.w3.org/">W3C</a> 
+      <a href="https://www.google.com/">Google</a>
+      <a href="prism.css">PRISM.CSSs</a>
+      <a href="prism.js">PRISM.JS</a>      
+<h2>RELATED RESOURCE</h2>
+   <a href="https://www.w3schools.com/Html/html_links.asp">html HYPERLINK </a>
+
+
+
+
+
 
 
 
@@ -47,7 +114,7 @@
 <h2>RELATED RESOURCE</h2>
 <a href="https://www.w3schools.com/html/html_lists.asp">html list </a>
  
- 
+<script src="prism.js"></script>
 </body>
  
 </html>
