@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"JayantGoel001": {
+		"galaxygao": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:application": {
@@ -17,7 +17,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "build",
+						"outputPath": "dist/galaxygao.github.io",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
@@ -89,10 +89,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "JayantGoel001:build:production"
+							"buildTarget": "galaxygao:build:production"
 						},
 						"development": {
-							"buildTarget": "JayantGoel001:build:development"
+							"buildTarget": "galaxygao:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -100,7 +100,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"buildTarget": "JayantGoel001:build"
+						"buildTarget": "galaxygao:build"
 					}
 				},
 				"test": {

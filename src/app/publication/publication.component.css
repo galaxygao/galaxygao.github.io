@@ -1,0 +1,81 @@
+.publication-section {
+  background-color: #f7f7f7; /* 浅灰色背景 */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+
+.width-175 {
+  width: 175px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.txt-bg-publication::before {
+  content: "Publications";
+}
+
+
+/* ✅ 固定标题为深色 */
+#my-publication {
+  color: #1a1a1a !important;
+}
+
+.publication-bg {
+  pointer-events: none;
+  background: radial-gradient(41.46% 54.99% at 65.36% 46.44%, #5a5a5a 0, #25292e 100%);
+  opacity: 0;
+  transition: opacity 1.6s ease-out;
+}
+
+.publication-bg-cloud {
+  width: calc(100% + 100px);
+  pointer-events: none;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease-out;
+}
+
+
+.certificate-button {
+  background: #fff;
+  color: #ff9800;
+  box-shadow: none;
+}
+
+/* 增大 Publications / Conferences 标题字体 */
+h4 {
+  font-size: 1.5rem;       /* 原来是 1.3rem，可调大一点 */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* 增大论文编号正文字体 */
+ol li {
+  font-size: 1.15rem;      /* 原来是 1.05rem，可提升一级 */
+  line-height: 1.75;
+}
+h4::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1.2em;
+  background-color: #ff9800;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#publication {
+ 
+
+  background-color: #f5f5f5;;
+}
+
+.txt-bg-publication::before {
+  content: "Publications";
+}

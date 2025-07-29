@@ -22,7 +22,14 @@ export class HomeComponent implements OnInit,AfterViewInit {
 		particlesJS.load('particles-js');
 		this.changeDetectorRef.detectChanges();
 	}
-	ngAfterViewInit() {
-		new Typed("#element",{stringsElement:'#typed-strings',typeSpeed: 100,backDelay: 3000,loop:true});
-	}
+	ngAfterViewInit(): void {
+		new Typed("#element", {
+			stringsElement: '#typed-strings',
+			typeSpeed: 120,
+			backSpeed: 0,
+			showCursor: false,
+			loop: false
+		});
+}
+
 }
