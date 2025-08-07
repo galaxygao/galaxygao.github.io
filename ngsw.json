@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1754527244220,
+  "timestamp": 1754530198864,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/429.6337771012e22861.js",
+        "/429.d3a10e85263d07db.js",
         "/872.cc452936e7f97c45.js",
         "/favicon.ico",
         "/index.html",
         "/main.195e8848e63dfb57.js",
         "/polyfills.7316f0b5c4de8d29.js",
-        "/runtime.aa3161b01c9dd263.js",
+        "/runtime.ed2a9cc86e7cd0cb.js",
         "/scripts.3ea932553ddadebc.js",
         "/styles.61b0674320f41b27.css"
       ],
@@ -121,7 +121,7 @@
   "dataGroups": [],
   "hashTable": {
     "/404.4ed6dad8c73a710d.webp": "c55234174be110511c6fdf693770c8dde7f046c1",
-    "/429.6337771012e22861.js": "06c4f809462d65604a8f505fc0f6d81b95dfb2b2",
+    "/429.d3a10e85263d07db.js": "1938f2c18f96c9b046f31be8c78ad028a430cf8f",
     "/872.cc452936e7f97c45.js": "bdd6d791f2e36535de95facfaf658d41eede02f8",
     "/about-bg.7c80c2136d4a089d.svg": "2f4e718723ee93de8349ca37808a09b0d5bbce6c",
     "/apple-touch-icon.png": "8218fb45b26dea0f140a388bcc06c918d08f1d1d",
@@ -205,11 +205,11 @@
     "/favicon-16x16.png": "897f537be9e5741b714b45fab9d24a28830f22bd",
     "/favicon-32x32.png": "053c8fbd3b9a6acc1b02f32172933ddad15cb0c9",
     "/favicon.ico": "61ea5e23b3647a514301fbc841632aa209c0902f",
-    "/index.html": "0ea47702e71f106c50140c16163e9b5bc72a044f",
+    "/index.html": "0ece7b16559e79e40ee4a476f18ce8e27663e33e",
     "/main.195e8848e63dfb57.js": "582ff34e36a654246cf022fc679eab5129c68732",
     "/polyfills.7316f0b5c4de8d29.js": "83a7b8ec3eec63e981d34a4f2fb2b706d6525be6",
     "/quote-img.5e642c8eee792695.webp": "27936458251d3dbc6d1eecfc1e501ab93a3838bb",
-    "/runtime.aa3161b01c9dd263.js": "8e8218bce4d67a47facd449f8d4eb5d583390d27",
+    "/runtime.ed2a9cc86e7cd0cb.js": "e590c86960e44a44fdf7b3c42f5e75c33853452b",
     "/scripts.3ea932553ddadebc.js": "a5ffaaa21641d8fbee6b34264ef7143e3e06308c",
     "/styles.61b0674320f41b27.css": "a8112361291e8a53e8493502f3dcbe8841480cc4"
   },
