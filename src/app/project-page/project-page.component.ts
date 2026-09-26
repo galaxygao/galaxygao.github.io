@@ -35,7 +35,7 @@ export class ProjectPageComponent {
   projectBlocks = [
     {
       title: 'Data-Driven Turbulence Research',
-      images: [],
+      images: ['assets/images/projects/data-driven-turbulence.png'],
       description: [
         'Built a resumable pipeline assembling full 1024³ JHTDB velocity fields from chunked requests, with checksum tiles, retry/backoff, and compressed Zarr output at 9.3 GB per frame.',
         'Ran slab-streamed FFT filtering and spectral derivatives at five scales on 16 workers, with a 92 GiB peak memory footprint.',
@@ -45,7 +45,7 @@ export class ProjectPageComponent {
     },
     {
       title: 'Physics-Informed Transformer for 2D Navier-Stokes',
-      images: [],
+      images: ['assets/images/projects/physics-informed-transformer.gif'],
       description: [
         'Built a PDEBench data pipeline for 512 × 512 velocity and forcing fields, using 200 frames and 204,800 samples from 1,024 sensors.',
         'Reduced roughly 50 million space-time points to a stride-16 grid plus 4,096 random collocation points for training on one RTX 3090.',

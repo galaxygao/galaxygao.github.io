@@ -38,16 +38,16 @@
         >
 
           <img
-            *ngIf="project['image']"
+            *ngIf="project['image'] || project['imagePath']"
             class="item-container img-fluid mx-auto"
-            src="assets/images/portfolio/{{ project['image'] }}"
+            [src]="project['imagePath'] || 'assets/images/portfolio/' + project['image']"
             alt="{{ project['project'].replaceAll('-', ' ') }}"
             title="{{ project['project'].replaceAll('-', ' ') }}"
             width="698"
             height="543"
             loading="lazy"
           />
-          <div *ngIf="!project['image']" class="item-container project-placeholder" aria-hidden="true">
+          <div *ngIf="!project['image'] && !project['imagePath']" class="item-container project-placeholder" aria-hidden="true">
             <i class="{{ project['icon'] }}"></i>
             <span>{{ project['project'] }}</span>
           </div>
