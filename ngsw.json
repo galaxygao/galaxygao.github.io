@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1790412923625,
+  "timestamp": 1790413067146,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -95,6 +95,7 @@
         "/assets/js/typed.min.js",
         "/assets/js/vanilla-tilt.min.js",
         "/assets/js/wow.min.js",
+        "/assets/resume/Xingqun-Gao-Resume.pdf",
         "/bgimg.2fffc780590c77c6.webp",
         "/fa-brands-400.a9db39c081f4c22d.woff2",
         "/fa-brands-400.b6fc96a61a67ef49.woff",
@@ -186,6 +187,7 @@
     "/assets/js/typed.min.js": "30d71da324a6f531b487fe911a77e800568c8812",
     "/assets/js/vanilla-tilt.min.js": "54fbe042af66347ac7e0dca26afec503d878dab6",
     "/assets/js/wow.min.js": "433ecbea2eac37104c8e924e781caa5aadfbd587",
+    "/assets/resume/Xingqun-Gao-Resume.pdf": "1a41f071ad02e0c7ba1f01291c8196635bdac6f8",
     "/bgimg.2fffc780590c77c6.webp": "825d33dda8bbc1f4a7f211b168428414d32e517d",
     "/fa-brands-400.a9db39c081f4c22d.woff2": "4239ce052e11ecec05000129969968aa3ea5786d",
     "/fa-brands-400.b6fc96a61a67ef49.woff": "8bdc4f706ecbd2a57cc35576a19ca61f8dff123a",
