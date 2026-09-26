@@ -107,11 +107,11 @@ export class ProjectPageComponent {
       tools: ['ANSYS', 'Multifluid CFD', 'SST k–ω', 'Experimental Validation'],
       metrics: [
         { value: '3', label: 'fluid phases' },
-        { value: '20 / 140', label: 'flow speeds, m/s' },
+        { value: 'σ·Fr', label: 'regime classifier' },
         { value: 'PoF', label: 'journal publication' }
       ],
       description: [
-        'Ran gas-vapor-water multi-fluid CFD of ventilated supercavitating flows at 20 and 140 m/s, spanning gravity-dominated and gravity-negligible regimes.',
+        'Ran gas-vapor-water multi-fluid CFD of ventilated supercavitating flows classified by σ·Fr, spanning gravity-dominated and gravity-negligible regimes.',
         'Established radial distribution laws of velocity, volume fraction, and superficial velocity for all three phases.',
         'Derived a shear-layer gas-loss model and validated it against water-whirling-arm and water-tunnel experiments; published in Physics of Fluids.'
       ]
