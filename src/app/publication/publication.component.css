@@ -79,3 +79,15 @@ h4::before {
 .txt-bg-publication::before {
   content: "Publications";
 }
+.publication-section ol li span,
+.publication-section ol li span * {
+  font-family: 'Times New Roman', Times, serif, sans-serif !important;
+  font-size: 1.5rem !important;
+}
+
+.honors-list li {
+  color: #4f5864;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.65;
+}

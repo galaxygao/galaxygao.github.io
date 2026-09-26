@@ -28,8 +28,8 @@
               <strong><em>Resume</em></strong>
             </ng-template>
             <div class="resume-button" placement="bottom" [ngbTooltip]="title">
-              <a rel="noreferrer" aria-label="Download Resume (opens in a new tab)" target="_blank" href="https://drive.google.com/file/d/1YN8qi_JcW1E4SFTS66HIvFlY2Rd1bF7A/view?usp=drive_link">
-                Download Resume <i class="fas fa-download ml-2"></i>
+              <a rel="noreferrer" aria-label="View resume (opens in a new tab)" target="_blank" [href]="homeData['resumeLink']">
+                View Resume <i class="fas fa-external-link-alt ml-2"></i>
               </a>
             </div>
           </div>

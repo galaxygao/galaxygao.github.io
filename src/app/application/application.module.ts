@@ -9,6 +9,7 @@ import {NavbarComponent} from "../navbar/navbar.component";
 import {AboutComponent} from "../about/about.component";
 import {QuoteComponent} from "../quote/quote.component";
 import {PortfolioComponent} from "../portfolio/portfolio.component";
+import {ProjectPageComponent} from '../project-page/project-page.component';
 import {PublicationComponent} from "../publication/publication.component";
 import {ExperiencesComponent} from "../experiences/experiences.component";
 import {ContactComponent} from "../contact/contact.component";
@@ -16,7 +17,7 @@ import {SocialComponent} from "../social/social.component";
 import {FooterComponent} from "../footer/footer.component";
 import {RouterModule, Routes} from "@angular/router";
 
-const routes: Routes = [{ path: '', component: ApplicationComponent }];
+const routes: Routes = [{ path: '', component: ApplicationComponent },{ path: 'projects', component: ProjectPageComponent }];
 
 @NgModule({
 	declarations: [
@@ -35,7 +36,8 @@ const routes: Routes = [{ path: '', component: ApplicationComponent }];
 	imports: [
 		RouterModule.forChild(routes),
 		CommonModule,
-		NgbTooltipModule
+		NgbTooltipModule,
+		ProjectPageComponent
 	]
 })
 export class ApplicationModule { }

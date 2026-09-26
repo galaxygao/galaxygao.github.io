@@ -124,8 +124,7 @@
 				"deploy": {
 					"builder": "angular-cli-ghpages:deploy",
 					"options": {
-						"branch": "gh-pages",
-						"directory": "build"
+						"branch": "gh-pages"
 					}
 				}
 			}

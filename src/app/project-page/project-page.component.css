@@ -1,0 +1,191 @@
+/* ========== 通用 spacing 样式 ========== */
+.spacing {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/* ========== 标题背景文字效果 ========== */
+.txt-bg-portfolio::before {
+  content: "Gao's Portfolio";
+}
+
+/* 响应式：小屏幕调整背景字大小 */
+@media (min-width: 200px) and (max-width: 768px) {
+  .txt-bg-portfolio::before {
+    font-size: 45px;
+  }
+}
+
+/* ========== 项目卡片 hover 动画 ========== */
+.item-box {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  border-radius: 5px;
+}
+
+.item-box:hover .item-mask,
+.item-box:focus .item-mask {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.item-box:hover .item-mask .item-caption,
+.item-box:focus .item-mask .item-caption {
+  opacity: 1;
+}
+
+.item-box:hover .item-container,
+.item-box:focus .item-container {
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out 0s;
+  width: 100%;
+}
+
+.item-container {
+  transform: translateX(0);
+  width: 100%;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.item-mask {
+  background: #242a35;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.item-mask p {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+}
+
+.item-mask .item-caption {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 0;
+  right: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+/* ========== 项目分块样式 ========== */
+.project-section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.project-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ========== 图片样式 ========== */
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ngb-carousel 样式：轮播图大小限制 + 居中 */
+ngb-carousel {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* carousel 内图片样式 */
+ngb-carousel img {
+  max-height: 400px;
+  object-fit: contain;
+  width: 100%;
+}
+
+/* 包裹 carousel 的 div 控制图片容器样式（用于居中） */
+.carousel-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+/* 所有 img 的统一样式限制 */
+img {
+  object-fit: contain;
+  max-height: 100%;
+  width: 100%;
+}
+
+/* ========== 项目描述（段落风格） ========== */
+.styled-paragraph {
+  width: 90% !important;
+  max-width: 1000px;
+  margin-left: 0%;
+  margin-right: auto;
+  padding: 1rem 1.25rem;
+  background-color: #f7f7f7;
+  border-left: 6px solid #ff9800;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  font-family: 'Georgia', serif;
+  color: #1a1a1a;
+  border-radius: 4px;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.05);
+}
+
+/* ========== 项目描述（带 bullet 的文本风格） ========== */
+.styled-bullet-text {
+  width: 100%;
+  margin-left: 2%;
+  margin-right: auto;
+  padding: 1.5rem 0.5rem;
+  background-color: #f7f7f7;
+  border-left: 6px solid #ff9800;
+  font-family: 'Arial Black', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  color: #1a1a1a;
+  text-align: left;
+  border-radius: 4px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.styled-bullet-text ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+  text-align: left;
+}
+
+.styled-bullet-text li {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  font-weight: bold;
+  color: #1a1a1a;
+}

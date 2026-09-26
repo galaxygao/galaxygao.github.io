@@ -1,0 +1,54 @@
+<section class="section" id="portfolio">
+  <div class="container">
+
+    <!-- 标题部分 -->
+    <div class="row justify-content-center txt-bg txt-bg-portfolio">
+      <div class="col-lg-6">
+        <div class="section-title text-center mb-4 pb-2">
+          <div class="mb-5 pb-3">
+            <i class="far fa-clone h1 text-muted"></i>
+          </div>
+          <h2 class="display-5 font-weight-bold">Gao's Portfolio</h2>
+          <p class="text-muted mx-auto mb-0 mt-4 para-desc">
+            Sample of some of my projects
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 作品分块区域 -->
+<div class="container">
+  <section class="project-section mb-5" *ngFor="let block of projectBlocks">
+    <!-- 项目标题 -->
+    <h3 class="project-title text-center display-6 mb-4">{{ block.title }}</h3>
+
+    <!-- 图片展示 -->
+    <div class="d-flex justify-content-center mb-4">
+      <!-- 多图轮播 -->
+      <ngb-carousel *ngIf="block.images.length > 1" class="w-75">
+        <ng-template ngbSlide *ngFor="let img of block.images">
+          <img [src]="img" class="d-block w-100 rounded" alt="Project image" />
+        </ng-template>
+      </ngb-carousel>
+
+      <!-- 单图展示 -->
+      <img *ngIf="block.images.length === 1"
+           [src]="block.images[0]"
+           class="rounded"
+           style="max-width: 75%;"
+           alt="Project image" />
+    </div>
+
+    <!-- 项目描述 -->
+    <!-- 项目描述 -->
+<div class="project-description styled-bullet-text">
+  <ul>
+    <li *ngFor="let line of block.description">{{ line }}</li>
+  </ul>
+</div>
+
+  </section>
+</div>

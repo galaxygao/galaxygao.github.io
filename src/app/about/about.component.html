@@ -60,6 +60,22 @@
           </div>
         </div>
 
+        <!-- Technical Skills Tab -->
+        <div class="tab-pane fade" [ngClass]="{'active show': activeTab === 'skills'}" id="skills"
+          aria-labelledby="skills-tab">
+          <div class="skills-section mt-5">
+            <i class="fas fa-laptop-code mb-4 font-size-50"></i>
+            <div class="row justify-content-center w-100">
+              <div *ngFor="let skill of aboutData['skills']" class="col-lg-6 mb-4">
+                <div class="skill-card h-100">
+                  <h3>{{ skill['category'] }}</h3>
+                  <p>{{ skill['details'] }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div> <!-- tab-content -->
     </div> <!-- col-lg-12 -->
   </div> <!-- container -->
