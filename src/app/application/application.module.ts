@@ -7,6 +7,7 @@ import {ApplicationComponent} from './application.component';
 import {HomeComponent} from "../home/home.component";
 import {NavbarComponent} from "../navbar/navbar.component";
 import {AboutComponent} from "../about/about.component";
+import {SkillsComponent} from "../skills/skills.component";
 import {QuoteComponent} from "../quote/quote.component";
 import {PortfolioComponent} from "../portfolio/portfolio.component";
 import {ProjectPageComponent} from '../project-page/project-page.component';
@@ -25,6 +26,7 @@ const routes: Routes = [{ path: '', component: ApplicationComponent },{ path: 'p
 		HomeComponent,
 		NavbarComponent,
 		AboutComponent,
+		SkillsComponent,
 		QuoteComponent,
 		PortfolioComponent,
 		PublicationComponent,

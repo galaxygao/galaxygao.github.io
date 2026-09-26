@@ -1,46 +1,116 @@
-.spacing {
-  padding-left: 3px;
-  padding-right: 3px;
+.portfolio-section {
+  background: #fff;
+  overflow: hidden;
 }
 
-.txt-bg-portfolio::before {
-  content: "My Portfolio";
+.portfolio-heading {
+  align-items: end;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  margin-bottom: 44px;
 }
 
-.item-box {
-  height: 400px; /* 你可以调整这个高度 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff; /* 可选：统一背景 */
+.section-kicker {
+  color: #d68100;
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.portfolio-heading h2 {
+  color: #242a35;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+  margin: 0;
+}
+
+.portfolio-heading > p {
+  color: #68707c;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(36, 42, 53, 0.08);
+  min-width: 0;
+  overflow: hidden;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  border-color: rgba(255, 152, 0, 0.52);
+  box-shadow: 0 18px 42px rgba(36, 42, 53, 0.14);
+  transform: translateY(-5px);
+}
+
+.project-card-link {
+  color: inherit;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.project-card-link:hover,
+.project-card-link:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card-link:focus-visible {
+  outline: 3px solid rgba(255, 152, 0, 0.65);
+  outline-offset: -3px;
+}
+
+.project-media {
+  aspect-ratio: 16 / 10;
+  background: #eef1f4;
+  overflow: hidden;
   position: relative;
 }
 
-
-.item-box:hover .item-mask,
-.item-box:focus .item-mask {
-  transform: translateX(0);
-  visibility: visible;
-}
-
-.item-box:hover .item-mask .item-caption,
-.item-box:focus .item-mask .item-caption {
-  opacity: 1;
-}
-
-.item-box:hover .item-container,
-.item-box:focus .item-container {
-  transform: translateX(100%);
-  transition: all 0.5s ease-in-out 0s;
+.project-media img {
+  backface-visibility: hidden;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(0) scale(1.001);
+  transition: transform 260ms ease;
   width: 100%;
 }
 
-.item-container {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  transform: translateX(0);
-  transition: all 0.5s ease-in-out 0s;
+.project-card:hover .project-media img,
+.project-card:focus-within .project-media img {
+  transform: translateZ(0) scale(1.035);
+}
+
+.project-index {
+  align-items: center;
+  backdrop-filter: blur(8px);
+  background: rgba(24, 29, 37, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.72rem;
+  height: 34px;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 44px;
 }
 
 .project-placeholder {
@@ -48,62 +118,78 @@
   background: linear-gradient(145deg, #242a35, #3c4654);
   color: #ffb13b;
   display: flex;
-  flex-direction: column;
-  gap: 22px;
-  height: 90%;
-  justify-content: center;
-  padding: 30px;
-  text-align: center;
-  width: 90%;
-}
-
-.project-placeholder i {
   font-size: 4rem;
+  height: 100%;
+  justify-content: center;
 }
 
-.project-placeholder span {
-  color: #fff;
-  font-size: 1.15rem;
-  line-height: 1.5;
+.project-copy {
+  display: flex;
+  flex-direction: column;
+  min-height: 285px;
+  padding: 28px 30px 30px;
 }
 
-
-.item-mask {
-  background: #242a35;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  visibility: hidden;
-  overflow: hidden;
-  transform: translateX(-100%);
-  transition: all 0.5s ease-in-out 0s;
+.project-category {
+  color: #d68100;
+  font-size: 0.73rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
-.item-mask p {
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  margin: 0;
-  color: #fff;
+.project-copy h3 {
+  color: #242a35;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  margin: 0 0 13px;
 }
 
-.item-mask .item-caption {
-  position: absolute;
-  bottom: 50%;
-  transform: translateY(50%);
-  left: 0;
-  right: 0;
-  padding-left: 30px;
-  padding-right: 30px;
-  opacity: 0;
-  transition: all 0.5s ease-in-out 0s;
+.project-copy p {
+  color: #68707c;
+  font-size: 0.93rem;
+  line-height: 1.72;
+  margin: 0 0 24px;
 }
 
-/* 响应式：小屏幕背景字大小调整 */
-@media (min-width: 200px) and (max-width: 768px) {
-  .txt-bg-portfolio::before {
-    font-size: 45px;
+.project-action {
+  align-items: center;
+  color: #242a35;
+  display: inline-flex;
+  font-size: 0.84rem;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.project-action i {
+  color: #d68100;
+  transition: transform 180ms ease;
+}
+
+.project-card:hover .project-action i,
+.project-card:focus-within .project-action i {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .portfolio-heading {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-copy {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-media img,
+  .project-action i {
+    transition: none;
   }
 }

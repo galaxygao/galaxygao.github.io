@@ -1,0 +1,25 @@
+<section class="section skills-home" id="skills">
+  <div class="container">
+    <div class="skills-heading">
+      <div>
+        <span class="section-kicker">Technical toolkit</span>
+        <h2>Skills for scientific computing</h2>
+      </div>
+      <p>
+        From physics-based simulation to machine-learning surrogates and
+        production-scale research pipelines.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <article *ngFor="let skill of skillsData; let index = index" class="skill-home-card">
+        <div class="skill-card-topline">
+          <span class="skill-icon" aria-hidden="true"><i class="{{ skill['icon'] }}"></i></span>
+          <span class="skill-number">0{{ index + 1 }}</span>
+        </div>
+        <h3>{{ skill['category'] }}</h3>
+        <p>{{ skill['details'] }}</p>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,65 +1,56 @@
-<section class="section pointer" id="portfolio">
+<section class="section portfolio-section" id="portfolio">
   <div class="container">
-
-    <!-- 标题部分 -->
-    <div class="row justify-content-center txt-bg txt-bg-portfolio">
-      <div class="col-lg-6">
-        <div class="wow fadeIn section-title text-center mb-4 pb-2">
-          <div class="mb-5 pb-3">
-            <i class="far fa-clone h1 text-muted"></i>
-          </div>
-          <h2 class="h3 font-weight-bold">My Portfolio</h2>
-          <p class="text-muted mx-auto mb-0 mt-4 para-desc">
-            Sample of some of my projects
-          </p>
-        </div>
+    <div class="portfolio-heading wow fadeIn">
+      <div>
+        <span class="section-kicker">Selected work</span>
+        <h2>Research portfolio</h2>
       </div>
+      <p>
+        Computational fluid mechanics, scientific machine learning, and
+        mechanics projects developed across research and coursework.
+      </p>
     </div>
 
-    <!-- 项目展示部分 -->
-    <div class="row container-grid mt-4 pt-2">
-      <div
-        *ngFor="let project of portfolioData"
-        class="wow {{ project['animationClass'] }} col-10 col-sm-6 col-lg-3 spacing"
+    <div class="portfolio-grid">
+      <article
+        *ngFor="let project of portfolioData; let index = index"
+        class="project-card wow {{ project['animationClass'] }}"
         [attr.data-wow-delay]="project['delay']"
       >
-        <ng-template #title>
-          <strong><em>Click To Checkout My Code.</em></strong>
-        </ng-template>
-
         <a
-          class="item-box m-2"
-          [href]="'/projects?project=' + project['project']"
-          target="_blank"
-          rel="noreferrer"
-          [placement]="project['placement']"
-          [ngbTooltip]="title"
-          aria-label="project detail"
+          class="project-card-link"
+          [routerLink]="['/projects']"
+          [queryParams]="{ project: project['slug'] }"
+          [attr.aria-label]="'View project: ' + project['project']"
         >
-
-          <img
-            *ngIf="project['image'] || project['imagePath']"
-            class="item-container img-fluid mx-auto"
-            [src]="project['imagePath'] || 'assets/images/portfolio/' + project['image']"
-            alt="{{ project['project'].replaceAll('-', ' ') }}"
-            title="{{ project['project'].replaceAll('-', ' ') }}"
-            width="698"
-            height="543"
-            loading="lazy"
-          />
-          <div *ngIf="!project['image'] && !project['imagePath']" class="item-container project-placeholder" aria-hidden="true">
-            <i class="{{ project['icon'] }}"></i>
-            <span>{{ project['project'] }}</span>
-          </div>
-          <div class="item-mask">
-            <div class="item-caption text-white text-center">
-              <h3 class="h5">{{ project['project'].replaceAll('-', ' ') }}</h3>
-              <p class="text-uppercase">{{ project['description'] }}</p>
+          <div class="project-media">
+            <img
+              *ngIf="project['image'] || project['imagePath']"
+              [src]="project['imagePath'] || 'assets/images/portfolio/' + project['image']"
+              [alt]="project['project']"
+              loading="lazy"
+              decoding="async"
+            />
+            <div
+              *ngIf="!project['image'] && !project['imagePath']"
+              class="project-placeholder"
+              aria-hidden="true"
+            >
+              <i class="{{ project['icon'] }}"></i>
             </div>
+            <span class="project-index">0{{ index + 1 }}</span>
+          </div>
+
+          <div class="project-copy">
+            <span class="project-category">{{ project['category'] }}</span>
+            <h3>{{ project['project'] }}</h3>
+            <p>{{ project['description'] }}</p>
+            <span class="project-action">
+              Explore project <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </span>
           </div>
         </a>
-      </div>
+      </article>
     </div>
-
   </div>
 </section>

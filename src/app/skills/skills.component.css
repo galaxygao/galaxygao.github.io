@@ -1,0 +1,115 @@
+.skills-home {
+  background: #f6f7f9;
+  overflow: hidden;
+}
+
+.skills-heading {
+  align-items: end;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  margin-bottom: 42px;
+}
+
+.section-kicker {
+  color: #d68100;
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.skills-heading h2 {
+  color: #242a35;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+  margin: 0;
+}
+
+.skills-heading > p {
+  color: #68707c;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.skill-home-card {
+  background: #fff;
+  border: 1px solid #e7e9ed;
+  border-radius: 16px;
+  min-height: 260px;
+  padding: 26px;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.skill-home-card:hover {
+  border-color: rgba(255, 152, 0, 0.48);
+  box-shadow: 0 14px 32px rgba(36, 42, 53, 0.1);
+  transform: translateY(-4px);
+}
+
+.skill-card-topline {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.skill-icon {
+  align-items: center;
+  background: #fff3df;
+  border-radius: 12px;
+  color: #d68100;
+  display: inline-flex;
+  font-size: 1.25rem;
+  height: 46px;
+  justify-content: center;
+  width: 46px;
+}
+
+.skill-number {
+  color: #c4c8ce;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+}
+
+.skill-home-card h3 {
+  color: #242a35;
+  font-size: 1.12rem;
+  line-height: 1.35;
+  margin: 0 0 13px;
+}
+
+.skill-home-card p {
+  color: #68707c;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-heading {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-home-card {
+    min-height: 0;
+  }
+}
