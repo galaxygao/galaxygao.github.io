@@ -2,12 +2,14 @@
   <div class="container">
     <div class="skills-heading">
       <div>
-        <span class="section-kicker">Technical toolkit</span>
-        <h2>Skills for scientific computing</h2>
+        <span class="section-kicker">{{language.pick('Technical toolkit', '技术工具')}}</span>
+        <h2>{{language.pick('Skills for scientific computing', '面向科学计算的技能')}}</h2>
       </div>
       <p>
-        From physics-based simulation to machine-learning surrogates and
-        production-scale research pipelines.
+        {{language.pick(
+          'From physics-based simulation to machine-learning surrogates and production-scale research pipelines.',
+          '涵盖物理建模、机器学习代理模型与面向生产规模的科研数据流程。'
+        )}}
       </p>
     </div>
 
@@ -17,8 +19,8 @@
           <span class="skill-icon" aria-hidden="true"><i class="{{ skill['icon'] }}"></i></span>
           <span class="skill-number">0{{ index + 1 }}</span>
         </div>
-        <h3>{{ skill['category'] }}</h3>
-        <p>{{ skill['details'] }}</p>
+        <h3>{{ language.pick(skill['category'], skill['categoryZh']) }}</h3>
+        <p>{{ language.pick(skill['details'], skill['detailsZh']) }}</p>
       </article>
     </div>
   </div>

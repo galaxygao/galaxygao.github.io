@@ -1,13 +1,13 @@
 <section class="section" id="about">
   <div class="container">
-    <div class="row justify-content-center txt-bg txt-bg-about">
+    <div class="row justify-content-center txt-bg txt-bg-about" [attr.data-watermark]="language.pick('About Me', '关于我')">
       <div class="col-lg-6 pointer">
         <div class="wow fadeIn section-title text-center mb-4 pb-2">
           <div class="mb-5 pb-3">
             <i class="fas fa-user-graduate h1 text-muted"></i>
           </div>
-          <h2 class="h3 font-weight-bold">About me</h2>
-          <p class="text-muted mx-auto mb-0 mt-4 para-desc">My education.</p>
+          <h2 class="h3 font-weight-bold">{{language.pick('About me', '关于我')}}</h2>
+          <p class="text-muted mx-auto mb-0 mt-4 para-desc">{{language.pick('My education.', '我的教育经历。')}}</p>
         </div>
       </div>
     </div>
@@ -17,11 +17,11 @@
         <li id="selector"></li>
         <li *ngFor="let tab of aboutData['NavTabs']" class="nav-item" (click)="changeActiveTab(tab['id'])">
           <ng-template #title>
-            <strong><em>{{ tab['name'] }}</em></strong>
+            <strong><em>{{ language.pick(tab['name'], tab['nameZh']) }}</em></strong>
           </ng-template>
           <a href="/" rel="noreferrer" class="nav-link" [ngClass]="{'active': activeTab === tab['id']}"
             id="{{tab['id']}}-tab" placement="{{tab['placement']}}" [ngbTooltip]="title">
-            {{ tab["name"] }}
+            {{ language.pick(tab['name'], tab['nameZh']) }}
           </a>
         </li>
       </ul>
@@ -41,9 +41,9 @@
                   <div *ngFor="let ed of aboutData['education']"
                     class="wow timeline-box bounceIn{{ed['animationClass']}}" data-wow-delay="0s">
                     <div class="timeline-container">
-                      <h3 class="experience-designation m-0 text-{{ed['textAlignment']}}">{{ed['degree']}}</h3>
-                      <h4 class="experience-company-name text-{{ed['textAlignment']}}">{{ed['college']}}</h4>
-                      <h5 class="experience-duration m-0 text-{{ed['textAlignment']}}">{{ed['duration']}}</h5>
+                      <h3 class="experience-designation m-0 text-{{ed['textAlignment']}}">{{language.pick(ed['degree'], ed['degreeZh'])}}</h3>
+                      <h4 class="experience-company-name text-{{ed['textAlignment']}}">{{language.pick(ed['college'], ed['collegeZh'])}}</h4>
+                      <h5 class="experience-duration m-0 text-{{ed['textAlignment']}}">{{language.pick(ed['duration'], ed['durationZh'])}}</h5>
                       <h6 class="experience-description font-weight-normal text-{{ed['textAlignment']}}">
                         {{ed['percentage']}}
                       </h6>

@@ -1,4 +1,5 @@
 import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {LanguageService} from '../language.service';
 
 declare var Typed: any;
 declare var particlesJS : any;
@@ -7,7 +8,7 @@ declare var data : any;
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.Default,
     styleUrls: ['./home.component.css'],
     standalone: false
 })
@@ -15,9 +16,7 @@ declare var data : any;
 export class HomeComponent implements OnInit,AfterViewInit {
 	public homeData = data['Home'];
 
-	constructor(private changeDetectorRef: ChangeDetectorRef) {
-		changeDetectorRef.detach();
-	}
+	constructor(private changeDetectorRef: ChangeDetectorRef, public language: LanguageService) {}
 	ngOnInit(): void {
 		particlesJS.load('particles-js');
 		this.changeDetectorRef.detectChanges();

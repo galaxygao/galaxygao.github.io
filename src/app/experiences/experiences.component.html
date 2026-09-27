@@ -1,14 +1,14 @@
 <section class="section research-section" id="research">
   <div class="container z-1">
-    <div class="row justify-content-center txt-bg txt-bg-experiences">
+    <div class="row justify-content-center txt-bg txt-bg-experiences" [attr.data-watermark]="language.pick('Research', '科研')">
       <div class="col-lg-6">
         <div class="section-title text-center mb-4 pb-2">
           <div class="mb-5 pb-3">
             <i class="fas fa-flask h1 text-muted"></i>
           </div>
-          <h2 class="h3 font-weight-bold">Research Experience</h2>
+          <h2 class="h3 font-weight-bold">{{language.pick('Research Experience', '科研经历')}}</h2>
           <p class="text-muted mx-auto mb-0 mt-4 para-desc">
-            Computational fluid mechanics, machine learning, and mechanics research.
+            {{language.pick('Computational fluid mechanics, machine learning, and mechanics research.', '计算流体力学、机器学习与计算力学研究。')}}
           </p>
         </div>
       </div>
@@ -19,13 +19,13 @@
         class="research-card wow fadeIn{{experience['animationClass']}}">
         <div class="research-heading">
           <div>
-            <h3>{{ experience['title'] }}</h3>
-            <p class="research-role">{{ experience['role'] }} · {{ experience['organization'] }}</p>
+            <h3>{{ language.pick(experience['title'], experience['titleZh']) }}</h3>
+            <p class="research-role">{{ language.pick(experience['role'], experience['roleZh']) }} · {{ language.pick(experience['organization'], experience['organizationZh']) }}</p>
           </div>
-          <span class="research-period">{{ experience['period'] }}</span>
+          <span class="research-period">{{ language.pick(experience['period'], experience['periodZh']) }}</span>
         </div>
         <ul>
-          <li *ngFor="let bullet of experience['bullets']">{{ bullet }}</li>
+          <li *ngFor="let bullet of language.pick(experience['bullets'], experience['bulletsZh'])">{{ bullet }}</li>
         </ul>
       </article>
     </div>

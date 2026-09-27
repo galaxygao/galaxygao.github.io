@@ -1,15 +1,15 @@
 <section class="section publication-section position-relative" id="publications">
   <div class="container z-1">
     <!-- 标题 -->
-    <div class="row justify-content-center txt-bg txt-bg-publication">
+    <div class="row justify-content-center txt-bg txt-bg-publication" [attr.data-watermark]="language.pick('Publications', '学术成果')">
       <div class="col-lg-6">
         <div class="section-title text-center mb-4 pb-2">
           <div class="mb-5 pb-3">
             <i class="fas fa-infinity h1 text-muted"></i>
           </div>
-          <h2 class="h3 font-weight-bold" id="my-publication">Publications</h2>
+          <h2 class="h3 font-weight-bold" id="my-publication">{{language.pick('Publications', '学术成果')}}</h2>
             <p class="text-muted mx-auto mb-0 mt-4 para-desc">
-            Journal and Conference Publications
+            {{language.pick('Journal and Conference Publications', '期刊论文、会议论文与荣誉奖项')}}
             </p>
 
         </div>
@@ -21,8 +21,8 @@
     <div class="row justify-content-center mb-5">
       <div class="col-lg-10">
         <div class="d-flex justify-content-between align-items-center mb-2">
-          <h4 class="font-weight-bold mb-0">Publications</h4>
-          <p class="text-muted mb-0 small">Corresponding author = <sup>*</sup></p>
+          <h4 class="font-weight-bold mb-0">{{language.pick('Publications', '期刊论文')}}</h4>
+          <p class="text-muted mb-0 small">{{language.pick('Corresponding author', '通讯作者')}} = <sup>*</sup></p>
         </div>
 
         <div class="bg-white p-4 rounded shadow-sm">
@@ -39,7 +39,7 @@
     <!-- Conferences -->
     <div class="row justify-content-center mb-5">
       <div class="col-lg-10">
-        <h4 class="font-weight-bold mb-3">Conferences</h4>
+        <h4 class="font-weight-bold mb-3">{{language.pick('Conferences', '会议论文')}}</h4>
         <div class="bg-white p-4 rounded shadow-sm">
           <ol class="pl-3 mb-0">
             <li class="mb-4" *ngFor="let conf of publicationData['conferenceList']">
@@ -53,10 +53,10 @@
     <!-- Honors -->
     <div class="row justify-content-center">
       <div class="col-lg-10">
-        <h4 class="font-weight-bold mb-3">Honors</h4>
+        <h4 class="font-weight-bold mb-3">{{language.pick('Honors', '荣誉奖项')}}</h4>
         <div class="bg-white p-4 rounded shadow-sm">
           <ul class="honors-list pl-3 mb-0">
-            <li class="mb-3" *ngFor="let honor of publicationData['honorsList']">{{ honor }}</li>
+            <li class="mb-3" *ngFor="let honor of language.pick(publicationData['honorsList'], publicationData['honorsListZh'])">{{ honor }}</li>
           </ul>
         </div>
       </div>

@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-publication',
   templateUrl: './publication.component.html',
-  styleUrls: ['./publication.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['./publication.component.css', './publication-language.component.css'],
+  changeDetection: ChangeDetectionStrategy.Default,
   standalone: false
 })
 export class PublicationComponent implements OnInit {
@@ -49,9 +50,16 @@ export class PublicationComponent implements OnInit {
       'Excellent Teaching Assistant, Shanghai Jiao Tong University (2024)',
       'Wu Scholarship for Research and Innovation (2023)',
       'Taihu Scholarship for Research and Innovation (2023)'
+    ],
+    honorsListZh: [
+      '上海市优秀毕业生，上海交通大学前 3%（2025）',
+      '上海交通大学优秀助教（2024）',
+      '吴氏科研创新奖学金（2023）',
+      '太湖科研创新奖学金（2023）'
     ]
   };
 
+  constructor(public language: LanguageService) {}
 
 
   ngOnInit(): void {}

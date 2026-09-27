@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, OnInit} from '@angular/core';
+import {LanguageService} from '../language.service';
 
 declare var data : any;
 declare var identity : any;
@@ -7,7 +8,7 @@ declare var identity : any;
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    styleUrls: ['./navbar.component.css'],
+    styleUrls: ['./navbar.component.css', './navbar-language.component.css'],
     standalone: false
 })
 
@@ -26,7 +27,18 @@ export class NavbarComponent implements OnInit {
 	public sticky : boolean = false;
 	public animation : string = "";
 
-	constructor(private changeDetectorRef: ChangeDetectorRef) {}
+	constructor(
+		private changeDetectorRef: ChangeDetectorRef,
+		public language: LanguageService
+	) {}
+
+	public navLabel(navLink: string): string {
+		return this.language.pick(navLink, this.navbarData['linkLabelsZh'][navLink]);
+	}
+
+	public toggleLanguage(): void {
+		this.language.toggle();
+	}
 
 	ngOnInit(): void {
 		for (const link of this.navbarData['links']) {

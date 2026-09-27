@@ -2,12 +2,14 @@
   <div class="container">
     <div class="portfolio-heading wow fadeIn">
       <div>
-        <span class="section-kicker">Selected work</span>
-        <h2>Research portfolio</h2>
+        <span class="section-kicker">{{language.pick('Selected work', '精选工作')}}</span>
+        <h2>{{language.pick('Research portfolio', '研究项目')}}</h2>
       </div>
       <p>
-        Computational fluid mechanics, scientific machine learning, and
-        mechanics projects developed across research and coursework.
+        {{language.pick(
+          'Computational fluid mechanics, scientific machine learning, and mechanics projects developed across research and coursework.',
+          '涵盖计算流体力学、科学机器学习与计算力学的科研及课程项目。'
+        )}}
       </p>
     </div>
 
@@ -21,13 +23,13 @@
           class="project-card-link"
           [routerLink]="['/projects']"
           [queryParams]="{ project: project['slug'] }"
-          [attr.aria-label]="'View project: ' + project['project']"
+          [attr.aria-label]="language.pick('View project: ' + project['project'], '查看项目：' + project['projectZh'])"
         >
           <div class="project-media">
             <img
               *ngIf="project['image'] || project['imagePath']"
               [src]="project['imagePath'] || 'assets/images/portfolio/' + project['image']"
-              [alt]="project['project']"
+              [alt]="language.pick(project['project'], project['projectZh'])"
               loading="lazy"
               decoding="async"
             />
@@ -42,11 +44,11 @@
           </div>
 
           <div class="project-copy">
-            <span class="project-category">{{ project['category'] }}</span>
-            <h3>{{ project['project'] }}</h3>
-            <p>{{ project['description'] }}</p>
+            <span class="project-category">{{ language.pick(project['category'], project['categoryZh']) }}</span>
+            <h3>{{ language.pick(project['project'], project['projectZh']) }}</h3>
+            <p>{{ language.pick(project['description'], project['descriptionZh']) }}</p>
             <span class="project-action">
-              Explore project <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              {{language.pick('Explore project', '查看项目')}} <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </span>
           </div>
         </a>

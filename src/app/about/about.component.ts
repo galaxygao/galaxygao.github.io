@@ -6,14 +6,15 @@ import {
   HostListener,
   OnInit
 } from '@angular/core';
+import {LanguageService} from '../language.service';
 
 declare var data: any;
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./about.component.css'],
+  changeDetection: ChangeDetectionStrategy.Default,
+  styleUrls: ['./about.component.css', './about-language.component.css'],
   standalone: false
 })
 export class AboutComponent implements OnInit, AfterViewInit {
@@ -25,9 +26,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
   public selector: any;
   public activeElements: any = {};
 
-  constructor(public changeDetectorRef: ChangeDetectorRef) {
-    changeDetectorRef.detach();
-  }
+  constructor(public changeDetectorRef: ChangeDetectorRef, public language: LanguageService) {}
 
   ngOnInit(): void {
     this.changeDetectorRef.detectChanges();

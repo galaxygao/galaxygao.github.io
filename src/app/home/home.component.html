@@ -19,17 +19,17 @@
                 <span id="element" class="text-white"></span>
               </h2>
               <h3 class="wow fadeInUpBig text-light mx-auto para-desc" data-wow-delay="0.5s">
-                {{homeData['introduction']}}
+                {{language.pick(homeData['introduction'], homeData['introductionZh'])}}
               </h3>
             </div>
           </div>
           <div class="mt-4 pt-2">
             <ng-template #title>
-              <strong><em>Resume</em></strong>
+              <strong><em>{{language.pick('Resume', '简历')}}</em></strong>
             </ng-template>
             <div class="resume-button" placement="bottom" [ngbTooltip]="title">
-              <a rel="noreferrer" aria-label="View resume (opens in a new tab)" target="_blank" [href]="homeData['resumeLink']">
-                View Resume <i class="fas fa-external-link-alt ml-2"></i>
+              <a rel="noreferrer" [attr.aria-label]="language.pick('View resume (opens in a new tab)', '查看简历（在新标签页打开）')" target="_blank" [href]="homeData['resumeLink']">
+                {{language.pick('View Resume', '查看简历')}} <i class="fas fa-external-link-alt ml-2"></i>
               </a>
             </div>
           </div>

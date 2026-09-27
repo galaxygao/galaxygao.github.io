@@ -1,1 +1,25 @@
-<section class="section contact-wrapper" id=contact><div id=particles-js2></div><div class=container><div class="row justify-content-center txt-bg txt-bg-contact"><div class=col-lg-6><div class="section-title text-center mb-4 pb-2 pointer wow fadeIn"><div class="mb-5 pb-3"> <i class="fas fa-headset h1"></i></div><h2 class="text-white h3">Contact me</h2><p class="text-white-50 mx-auto mb-0 mt-4 para-desc">Address, Phone Number and Email Address.</p></div></div></div><div class="row justify-content-center"><div *ngFor="let contact of contactData" class="col-lg-3 col-md-4 mt-4 pt-2 pointer wow slideIn{{contact['animationClass']}}" data-wow-delay=0.1s><ng-template #title><strong> <em>{{contact['title']}}</em> </strong></ng-template><div class="text-center" placement="bottom" [ngbTooltip]="title"><i class="{{contact['icon']}} text-custom h3 mb-4"></i><h3 *ngFor="let links of contact['links']" class="mb-{{contact['links'].length-1}} font-weight-normal line-height-normal"><a rel="noreferrer" aria-label="contact(opens in a new tab)" target="_blank" class="contact-links" href="{{links['type']}}{{links['title']}}">{{links['title']}}</a></h3></div></div></div></div></section>
+<section class="section contact-wrapper" id="contact">
+  <div id="particles-js2"></div>
+  <div class="container">
+    <div class="row justify-content-center txt-bg txt-bg-contact" [attr.data-watermark]="language.pick('Contact Me', '联系我')">
+      <div class="col-lg-6">
+        <div class="section-title text-center mb-4 pb-2 pointer wow fadeIn">
+          <div class="mb-5 pb-3"><i class="fas fa-headset h1"></i></div>
+          <h2 class="text-white h3">{{language.pick('Contact me', '联系我')}}</h2>
+          <p class="text-white-50 mx-auto mb-0 mt-4 para-desc">{{language.pick('Location, phone number, and email address.', '所在地、联系电话与电子邮箱。')}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div *ngFor="let contact of contactData" class="col-lg-3 col-md-4 mt-4 pt-2 pointer wow slideIn{{contact['animationClass']}}" data-wow-delay="0.1s">
+        <ng-template #title><strong><em>{{language.pick(contact['title'], contact['titleZh'])}}</em></strong></ng-template>
+        <div class="text-center" placement="bottom" [ngbTooltip]="title">
+          <i class="{{contact['icon']}} text-custom h3 mb-4"></i>
+          <h3 *ngFor="let link of contact['links']" class="mb-{{contact['links'].length-1}} font-weight-normal line-height-normal">
+            <a rel="noreferrer" [attr.aria-label]="language.pick('Contact link (opens in a new tab)', '联系方式（在新标签页打开）')" target="_blank" class="contact-links" [href]="link['type'] + link['title']">{{language.pick(link['title'], link['titleZh'])}}</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

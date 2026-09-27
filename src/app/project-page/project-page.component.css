@@ -43,6 +43,36 @@
   z-index: 1;
 }
 
+.project-nav-actions {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+}
+
+.project-language-toggle {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  color: #7f8996;
+  display: inline-flex;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  gap: 5px;
+  padding: 7px 10px;
+}
+
+.project-language-toggle:hover,
+.project-language-toggle:focus-visible {
+  border-color: #ffb13b;
+  outline: none;
+}
+
+.project-language-toggle .active {
+  color: #fff;
+}
+
 .brand-link,
 .back-link {
   color: #fff;
@@ -347,6 +377,18 @@
 
   .project-hero {
     padding-top: 20px;
+  }
+
+  .project-nav-actions {
+    gap: 10px;
+  }
+
+  .back-link {
+    font-size: 0;
+  }
+
+  .back-link i {
+    font-size: 0.82rem;
   }
 
   .hero-copy {

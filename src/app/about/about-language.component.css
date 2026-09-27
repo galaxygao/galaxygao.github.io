@@ -1,0 +1,3 @@
+.txt-bg-about::before {
+  content: attr(data-watermark);
+}
